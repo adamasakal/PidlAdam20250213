@@ -1,1 +1,12 @@
-<p>parent works!</p>
+<div>
+    <label>Első szám:</label>
+    <input type="number" [(ngModel)]="a">
+  
+    <label>Második szám:</label>
+    <input type="number" [(ngModel)]="b">
+  
+    <app-child [a]="a" [b]="b" (resultEvent)="updateResult($event)"></app-child>
+  
+    <p>Eredmény: {{ result }}</p>
+  </div>
+  
